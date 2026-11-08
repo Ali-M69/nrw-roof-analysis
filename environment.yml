@@ -1,0 +1,20 @@
+name: nrw-roofs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pdal
+  - python-pdal
+  - gdal
+  - libgdal-jp2openjpeg   # JPEG 2000 driver for the NRW orthophotos
+  - rasterio
+  - shapely
+  - laspy
+  - lazrs-python
+  - numpy
+  - scipy
+  - pyyaml
+  - matplotlib
+  - pytest
+  - pip

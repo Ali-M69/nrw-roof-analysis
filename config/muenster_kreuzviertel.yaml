@@ -1,0 +1,27 @@
+# Area of interest: Kreuzviertel, Münster (residential area with gable, hip and flat roofs).
+# All coordinates are ETRS89 / UTM zone 32N (EPSG:25832), the NRW reference system.
+
+name: muenster_kreuzviertel
+crs: "EPSG:25832"
+
+# NRW open data is delivered in 1 km x 1 km tiles, named by the lower-left corner in km.
+tile:
+  east_km: 405
+  north_km: 5758
+
+# minx, miny, maxx, maxy in metres. Keep it small (500 m x 500 m) for a fast run.
+aoi: [405000, 5758400, 405500, 5758900]
+
+data_dir: data/raw
+out_dir: outputs/muenster_kreuzviertel
+
+processing:
+  resolution: 0.5            # raster cell size in metres
+  min_building_height: 2.5   # metres above ground
+  min_single_return_ratio: 0.7  # roofs reflect mostly single returns, tree crowns do not
+  min_building_area: 30.0    # m2
+  ransac_distance: 0.15      # metres, plane inlier tolerance
+  ransac_iterations: 400
+  max_planes: 8
+  flat_slope_deg: 10.0
+  seed: 42

@@ -1,0 +1,9 @@
+data/
+outputs/
+*.laz
+*.las
+*.jp2
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
